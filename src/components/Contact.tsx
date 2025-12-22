@@ -16,12 +16,12 @@ export default function Contact() {
 
         <div className="space-y-4">
           <p className="text-lg text-gray-800 dark:text-gray-200">
-            📧 riki.48@gotmail.com
+            📧 riki.48@hotmail.com
           </p>
 
           <div className="flex justify-center gap-6">
             <a
-              href="https://github.com/riky48"
+              href="https://github.com/Riky48"
               target="_blank"
               rel="noreferrer"
               className="text-blue-600 hover:underline"
@@ -30,7 +30,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/ricardokrotterd/"
               target="_blank"
               rel="noreferrer"
               className="text-blue-600 hover:underline"
