@@ -38,7 +38,8 @@ export default function Projects() {
 
           <div className="flex gap-4 pt-4">
             <a
-              href="#"
+              href="https://github.com/Riky48/TPFINALFIP-riff.and.rate"
+              target="_blank"
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
             >
               Ver repositorio
