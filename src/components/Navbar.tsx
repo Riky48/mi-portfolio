@@ -40,22 +40,52 @@ export default function Navbar({ toggleDark }: NavbarProps){
 
       {/* Menú Mobile */}
       {open && (
-  <div className="md:hidden bg-white dark:bg-gray-900 px-6 pb-6">
-    <div className="flex flex-col gap-4 text-center">
-      <a href="#hero" onClick={() => setOpen(false)}>Inicio</a>
-      <a href="#about" onClick={() => setOpen(false)}>Sobre mí</a>
-      <a href="#projects" onClick={() => setOpen(false)}>Proyectos</a>
-      <a href="#skills" onClick={() => setOpen(false)}>Skills</a>
-      <a href="#contact" onClick={() => setOpen(false)}>Contacto</a>
+  <div className="md:hidden bg-white dark:bg-gray-900 px-6 pb-6 space-y-4">
+    <a
+      href="#hero"
+      onClick={() => setOpen(false)}
+      className="block text-gray-800 dark:text-gray-200"
+    >
+      Inicio
+    </a>
 
-      <button onClick={toggleDark} className="mt-4">
-        🌙 Modo oscuro
-      </button>
-    </div>
-  </div>
-)}
+    <a
+      href="#about"
+      onClick={() => setOpen(false)}
+      className="block text-gray-800 dark:text-gray-200"
+    >
+      Sobre mí
+    </a>
 
-    
-    </nav>
-  );
-}
+    <a
+      href="#projects"
+      onClick={() => setOpen(false)}
+      className="block text-gray-800 dark:text-gray-200"
+    >
+      Proyectos
+    </a>
+
+    <a
+      href="#skills"
+      onClick={() => setOpen(false)}
+      className="block text-gray-800 dark:text-gray-200"
+    >
+      Skills
+    </a>
+
+    <a
+      href="#contact"
+      onClick={() => setOpen(false)}
+      className="block text-gray-800 dark:text-gray-200"
+    >
+      Contacto
+    </a>
+
+    <button
+      onClick={toggleDark}
+      className="mt-4 text-gray-800 dark:text-gray-200"
+    >
+      🌙 Modo oscuro
+    </button>
+  </div>)}
+     </nav> )}

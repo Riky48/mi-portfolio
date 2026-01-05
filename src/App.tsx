@@ -12,11 +12,11 @@ function App() {
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
-    localStorage.theme = dark ? "dark" : "light";
+    localStorage.theme = dark ? "dark" : "light";   /* usando localstorage para mantener la pagina en modo oscuro aunque se restablezca la pagina*/ 
   }, [dark]);
 
   return (
-    <>
+    <div className="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors">
       <Navbar toggleDark={() => setDark(!dark)} />
       <Hero />
       <About />
@@ -24,7 +24,7 @@ function App() {
       <Skills />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
 

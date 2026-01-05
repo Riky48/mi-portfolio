@@ -1,46 +1,94 @@
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 transition-colors"
+      className="relative min-h-screen flex items-center justify-center
+                 text-gray-900 dark:text-gray-100 overflow-hidden"
     >
-      <div className="max-w-3xl w-full text-center px-4">
+      {/* Fondo */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/hero-drums.jpg')",
+        }}
+      />
 
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-          Hola, soy <span className="text-blue-600">Ricardo Krotter</span>
-        </h1>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white/80 dark:bg-black/70" />
 
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
-          Desarrollador Web Full Stack
-        </h2>
+      {/* Contenido */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative z-10 max-w-3xl w-full text-center px-6"
+      >
+        {/* Título */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="text-4xl md:text-5xl font-bold mb-4"
+        >
+          Hola, soy{" "}
+          <span className="text-blue-600 dark:text-blue-400">
+            Ricardo Krotter
+          </span>
+        </motion.h1>
 
-        <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">
-          En formación constante, enfocado en crear aplicaciones web funcionales y claras.
-          Busco mi primera oportunidad profesional en el mundo IT.
-        </p>
+        {/* Subtítulo */}
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="text-2xl md:text-3xl font-semibold
+                     text-gray-700 dark:text-gray-300 mb-6"
+        >
+          Desarrollador Web Full Stack & Músico
+        </motion.h2>
 
-        <p className="text-sm text-gray-500 dark:text-gray-500 mb-10">
-          Background en trabajo bajo presión y disciplina profesional
-        </p>
+        {/* Texto */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          className="text-lg text-gray-600 dark:text-gray-400 mb-10"
+        >
+          Creo aplicaciones web funcionales, claras y con identidad.
+        </motion.p>
 
-        <div className="flex justify-center gap-6">
+        {/* Botones */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="flex justify-center gap-6"
+        >
           <a
             href="#projects"
-            className="px-6 py-3 rounded-md bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
+            className="px-6 py-3 rounded-md
+                       bg-blue-600 text-white font-semibold
+                       hover:bg-blue-700 hover:-translate-y-0.5
+                       transition-all"
           >
             Ver proyectos
           </a>
 
           <a
             href="#contact"
-            className="px-6 py-3 rounded-md border border-blue-600 text-blue-600 font-semibold
-                       hover:bg-blue-50 dark:hover:bg-gray-800 transition"
+            className="px-6 py-3 rounded-md
+                       border border-blue-600
+                       text-blue-600 dark:text-blue-400
+                       hover:bg-blue-50 dark:hover:bg-gray-700
+                       hover:-translate-y-0.5
+                       transition-all"
           >
             Contacto
           </a>
-        </div>
-
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
