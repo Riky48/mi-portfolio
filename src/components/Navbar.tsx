@@ -40,18 +40,22 @@ export default function Navbar({ toggleDark }: NavbarProps){
 
       {/* Menú Mobile */}
       {open && (
-        <div className="md:hidden bg-white dark:bg-gray-900 px-6 pb-6 space-y-4">
-          <a href="#hero" onClick={() => setOpen(false)}>Inicio</a>
-          <a href="#about" onClick={() => setOpen(false)}>Sobre mí</a>
-          <a href="#projects" onClick={() => setOpen(false)}>Proyectos</a>
-          <a href="#skills" onClick={() => setOpen(false)}>Skills</a>
-          <a href="#contact" onClick={() => setOpen(false)}>Contacto</a>
+  <div className="md:hidden bg-white dark:bg-gray-900 px-6 pb-6">
+    <div className="flex flex-col gap-4 text-center">
+      <a href="#hero" onClick={() => setOpen(false)}>Inicio</a>
+      <a href="#about" onClick={() => setOpen(false)}>Sobre mí</a>
+      <a href="#projects" onClick={() => setOpen(false)}>Proyectos</a>
+      <a href="#skills" onClick={() => setOpen(false)}>Skills</a>
+      <a href="#contact" onClick={() => setOpen(false)}>Contacto</a>
 
-          <button onClick={toggleDark} className="block">
-            🌙 Modo oscuro
-          </button>
-        </div>
-      )}
+      <button onClick={toggleDark} className="mt-4">
+        🌙 Modo oscuro
+      </button>
+    </div>
+  </div>
+)}
+
+    
     </nav>
   );
 }
