@@ -62,7 +62,9 @@ export default function Projects() {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: direction > 0 ? -100 : 100, opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8"
+              className=" bg-white dark:bg-gray-800 rounded-xl p-8 shadow-md 
+              transition-all duration-300 hover:-translate-y-2hover:shadow-xl"
+
             >
               <h3 className="text-2xl font-semibold mb-4">
                 {project.title}

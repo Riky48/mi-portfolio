@@ -5,15 +5,16 @@ export default function Skills() {
       className="py-24 px-6 bg-white dark:bg-gray-900 transition-colors"
     >
       <div className="max-w-5xl mx-auto">
-
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
           Habilidades Técnicas
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
-
           {/* Frontend */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+          <div
+            className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm 
+            transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+          >
             <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
               Frontend
             </h3>
@@ -28,7 +29,8 @@ export default function Skills() {
           </div>
 
           {/* Backend */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm 
+            transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
             <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
               Backend
             </h3>
@@ -42,7 +44,8 @@ export default function Skills() {
           </div>
 
           {/* Tools */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm 
+            transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
             <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
               Herramientas
             </h3>
@@ -54,7 +57,6 @@ export default function Skills() {
               <li>VS Code</li>
             </ul>
           </div>
-
         </div>
       </div>
     </section>
