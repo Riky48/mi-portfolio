@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors">
-      <Navbar toggleDark={() => setDark(!dark)} />
+      <Navbar dark={dark} toggleDark={() => setDark(!dark)} />
       <Hero />
       <About />
       <Projects />
