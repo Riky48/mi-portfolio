@@ -4,7 +4,9 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center
+      className="relative <-0 min-h-screen pt-24 
+                flex items-center justify-center
+                 bg-slate-100 dark:bg-gray-950
                  text-gray-900 dark:text-gray-100 overflow-hidden"
     >
       {/* Fondo */}
@@ -44,7 +46,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
           className="text-2xl md:text-3xl font-semibold
-                     text-gray-700 dark:text-gray-300 mb-6"
+                     text-slate-600 dark:text-slate-300 mb-6"
         >
           Desarrollador Web Full Stack & Músico
         </motion.h2>
@@ -54,7 +56,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="text-lg text-gray-600 dark:text-gray-400 mb-10"
+          className="text-lg text-slate-500 dark:text-slate-400 mb-10"
         >
           Creo aplicaciones web funcionales, claras y con identidad.
         </motion.p>

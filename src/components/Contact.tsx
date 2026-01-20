@@ -2,20 +2,21 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 px-6 bg-gray-50 dark:bg-gray-900 transition-colors"
+      className="py-24 px-6 bg-slate-50 dark:bg-slate-900 transition"
     >
       <div className="max-w-3xl mx-auto text-center">
 
-        <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+        <h2 className="text-3xl font-bold mb-6 bg-slate-50 dark:bg-slate-900
+        text-slate-900 dark:text-slate-100">
           Contacto
         </h2>
 
-        <p className="text-gray-600 dark:text-gray-300 mb-8">
+        <p className="text-slate-600 dark:text-slate-300 mb-8">
           Si querés contactarme por trabajo, proyectos o colaborar, escribime.
         </p>
 
         <div className="space-y-4">
-          <p className="text-lg text-gray-800 dark:text-gray-200">
+          <p className="text-lg text-slate-600 dark:text-slate-300">
             📧 riki.48@hotmail.com
           </p>
 

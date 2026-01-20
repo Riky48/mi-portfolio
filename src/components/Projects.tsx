@@ -45,12 +45,9 @@ export default function Projects() {
   };
 
   return (
-    <section
-      id="projects"
-      className="scroll-mt-24 py-24 px-6 bg-gray-50 dark:bg-gray-900"
-    >
+    <section id="projects" className="py-24 px-6 bg-slate-50 dark:bg-slate-900">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-12 text-gray-900 dark:text-white">
+        <h2 className="text-3xl font-bold mb-12 text-slate-900 dark:text-slate-100">
           Proyectos
         </h2>
 
@@ -61,22 +58,18 @@ export default function Projects() {
               initial={{ x: direction > 0 ? 100 : -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: direction > 0 ? -100 : 100, opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className=" bg-white dark:bg-gray-800 rounded-xl p-8 shadow-md 
-              transition-all duration-300 hover:-translate-y-2hover:shadow-xl"
-
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className=" bg-white dark:bg-slate-800 rounded-xl p-8 shadow-md 
+              transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
-              <h3 className="text-2xl font-semibold mb-4">
-                {project.title}
-              </h3>
+              <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
 
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 {project.description}
               </p>
 
               <p className="text-sm text-gray-500 mb-6">
-                <span className="font-semibold">Stack:</span>{" "}
-                {project.stack}
+                <span className="font-semibold">Stack:</span> {project.stack}
               </p>
 
               <div className="flex justify-center gap-4">
@@ -118,6 +111,20 @@ export default function Projects() {
             Siguiente →
           </button>
         </div>
+      </div>
+      <div className="flex justify-center gap-2 mt-6">
+        {projects.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`w-3 h-3 rounded-full transition
+        ${
+          i === index
+            ? "bg-blue-600"
+            : "bg-gray-300 dark:bg-gray-600 hover:bg-blue-400"
+        }`}
+          />
+        ))}
       </div>
     </section>
   );

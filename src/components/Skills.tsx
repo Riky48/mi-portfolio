@@ -2,10 +2,10 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-24 px-6 bg-white dark:bg-gray-900 transition-colors"
+      className="py-24 px-6 bg-slate-50 dark:bg-slate-900 transition-colors"
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+        <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12 text-center">
           Habilidades Técnicas
         </h2>
 
