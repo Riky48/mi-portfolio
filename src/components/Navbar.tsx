@@ -28,7 +28,7 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
         </span>
 
         {/* Links Desktop */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center ml-auto gap-6">
           <a href="#hero" className={linkClass}>
             Inicio
           </a>
