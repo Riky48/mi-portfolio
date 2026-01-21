@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
+
 import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+
+import AboutProjects from "./components/AboutProjects";
+import ContactFooter from "./components/ContactFooter";
 
 
 function App() {
@@ -22,17 +22,16 @@ function App() {
     <div
   className="
     min-h-screen
+    bg-black/90 
     transition-colors
   "
 >
 
       <Navbar dark={dark} toggleDark={() => setDark(!dark)} />
       <Hero />
-      <About />
-      <Projects />
+      <AboutProjects />
       <Skills />
-      <Contact />
-      <Footer />
+      <ContactFooter />
     </div>
   );
 }

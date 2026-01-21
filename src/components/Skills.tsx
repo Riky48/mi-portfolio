@@ -17,7 +17,7 @@ export default function Skills() {
       }}
     >
       {/* OVERLAY */}
-      <div className="absolute inset-0 bg-black/80 dark:bg-black/90" />
+      <div className="absolute inset-0 bg-black/80 dark:bg-black/80" />
 
       {/* CONTENIDO */}
       <div className="relative z-10 w-full">
