@@ -22,8 +22,6 @@ function App() {
     <div
   className="
     min-h-screen
-    bg-blue-900 text-white
-    dark:bg-black
     transition-colors
   "
 >

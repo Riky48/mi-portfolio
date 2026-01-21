@@ -49,7 +49,7 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
         </div>
         <button
             onClick={toggleDark}
-            className="ml-4 text-xl z-50 relative transition-transform hover:rotate-12"
+            className="ml-auto text-xl z-50 relative transition-transform hover:rotate-12"
             aria-label="Toggle dark mode"
           >
             {dark ? "☀️" : "🌙"}
