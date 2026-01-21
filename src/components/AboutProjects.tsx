@@ -105,6 +105,26 @@ export default function AboutProjects() {
               </p>
             </div>
           </motion.div>
+          <div className="mt-8 flex justify-center md:justify-start">
+  <a
+    href="/Ricardo_Krotter_CV.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      px-6 py-3 rounded-md
+      border border-emerald-500
+      text-emerald-400 font-semibold
+      hover:bg-emerald-500 hover:text-black
+      dark:border-red-500 dark:text-red-400
+      dark:hover:bg-red-500 dark:hover:text-black
+      transition-all
+      flex items-center gap-2
+    "
+  >
+    📄 Ver CV (PDF)
+  </a>
+</div>
+
         </section>
 
         {/* ================= PROJECTS ================= */}
