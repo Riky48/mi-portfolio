@@ -14,7 +14,7 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
   return (
     <nav
   className="
-    fixed top-0 w-full z-50
+    fixed top-0 w-full z-50  
     bg-gradient-to-br from-emerald-900 via-emerald/5 to-black-900
     dark:from-dark-bg dark:via-black/5 dark:to-black
     transition-colors
@@ -23,12 +23,12 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
 
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <span className="text-xl font-bold text-slate-900 dark:text-white">
-          Riky<span className="text-white dark:text-red-700">.dev</span>
+        <span className="text-xl font-bold text-white">
+          Riky<span className="text-emerald-400 dark:text-red-500">.dev</span>
         </span>
 
         {/* Links Desktop */}
-        <div >
+        <div className="hidden md:flex items-center gap-6">
           <a href="#hero" className={linkClass}>
             Inicio
           </a>
@@ -45,19 +45,20 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
             Contacto
           </a>
 
-          <button
+          
+        </div>
+        <button
             onClick={toggleDark}
-            className="ml-4 text-xl transition-transform hover:rotate-12"
+            className="ml-4 text-xl z-50 relative transition-transform hover:rotate-12"
             aria-label="Toggle dark mode"
           >
             {dark ? "☀️" : "🌙"}
           </button>
-        </div>
 
         {/* Botón Hamburguesa (Mobile) */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl text-gray-900 dark:text-white"
+          className="md:hidden text-2xl text-black-900 dark:text-white"
         >
           ☰
         </button>
@@ -65,11 +66,11 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
 
       {/* Menú Mobile */}
       {open && (
-        <div className="md:hidden bg-white dark:bg-gray-900 px-6 pb-6 flex flex-col gap-4">
+        <div className="md:hidden bg-black/90 backdrop-blur px-6 pb-6 flex flex-col gap-4">
           <a
             href="#hero"
             onClick={() => setOpen(false)}
-            className="block text-gray-800 dark:text-gray-200"
+            className="block mt-4 text-gray-800 dark:text-gray-200"
           >
             Inicio
           </a>
@@ -106,15 +107,6 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
             Contacto
           </a>
 
-          <button onClick={toggleDark} className="
-  ml-4 text-xl
-  text-light-green dark:text-dark-accent
-  hover:scale-110
-  transition
-"
->
-            {dark ? "☀️ Modo claro" : "🌙 Modo oscuro"}
-          </button>
         </div>
       )}
     </nav>
