@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import riffandrateImg from "../assets/riffandrate.png";
+import portfolioImg from "../assets/portfolio.png";
 
 type Project = {
   title: string;
@@ -7,6 +9,7 @@ type Project = {
   stack: string;
   repo: string;
   demo: string;
+  image: string;
 };
 
 const projects: Project[] = [
@@ -17,6 +20,7 @@ const projects: Project[] = [
     stack: "React · TypeScript · NestJS · MySQL",
     repo: "https://github.com/Riky48/TPFINALFIP-riff.and.rate",
     demo: "https://riffandrate.vercel.app",
+    image: riffandrateImg,
   },
   {
     title: "Portfolio Personal",
@@ -25,6 +29,7 @@ const projects: Project[] = [
     stack: "React · Vite · Tailwind",
     repo: "https://github.com/Riky48/mi-portfolio",
     demo: "https://ricardokrotter.vercel.app",
+    image: portfolioImg,
   },
 ];
 
@@ -45,9 +50,14 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 px-6 bg-slate-50 dark:bg-slate-900">
+    <section
+      id="projects"
+      className="min-h-screen py-24 px-6  bg-gradient-to-br from-slate-900 via-black800 to-green-900
+    dark:from-dark-bg dark:via-black/5 dark:to-black
+    transition-colors"
+    >
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-12 text-slate-900 dark:text-slate-100">
+        <h2 className="text-3xl font-bold mb-12 text-green-600 dark:text-red-600">
           Proyectos
         </h2>
 
@@ -59,12 +69,25 @@ export default function Projects() {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: direction > 0 ? -100 : 100, opacity: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className=" bg-white dark:bg-slate-800 rounded-xl p-8 shadow-md 
-              transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-            >
+              className="
+  bg-gradient-to-br from-emerald-900 via-green-900 to-dark dark:from-red-700 dark:via-red-900 dark:to-dark
+  border border-black border-5 dark:border-white dark:border-5
+  rounded-xl
+  shadow-sm
+  hover:-translate-y-1
+  hover:shadow-xl
+  transition-all
+"
+            > 
+            <img 
+        src={project.image}
+        alt={project.title}
+        className="w-full h-56 object-cover object-top rounded-lg mb-6 shadow-md
+        transition-transform duration-300 group-hover:scale-105"
+        />
               <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
 
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <p className="text-white dark:text-white mb-4">
                 {project.description}
               </p>
 
@@ -77,7 +100,9 @@ export default function Projects() {
                   href={project.repo}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                  className="px-4 py-2 bg-green-600 text-black font-semibold dark:bg-dark-accent dark:text-black
+                       hover:bg-green-500 hover:-translate-y-0.5 dark:hover:bg-dark-accent/50
+                       transition-all rounded "
                 >
                   Repositorio
                 </a>
@@ -86,7 +111,12 @@ export default function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-4 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-50 dark:hover:bg-gray-700"
+                  className="px-4 py-2 rounded-md
+                       border border-green-600 dark:border-dark-accent
+                       text-green-600 dark:text-red-400
+                       hover:bg-gray-800 dark:hover:bg-gray-800
+                       hover:-translate-y-0.5
+                       transition-all"
                 >
                   Demo
                 </a>
@@ -99,14 +129,14 @@ export default function Projects() {
         <div className="flex justify-center gap-6 mt-8">
           <button
             onClick={prev}
-            className="px-4 py-2 border rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="px-4 py-2 border rounded hover:bg-green-500 dark:hover:bg-red-500"
           >
             ← Anterior
           </button>
 
           <button
             onClick={next}
-            className="px-4 py-2 border rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="px-4 py-2 border rounded hover:bg-green-500 dark:hover:bg-red-500"
           >
             Siguiente →
           </button>
@@ -120,8 +150,8 @@ export default function Projects() {
             className={`w-3 h-3 rounded-full transition
         ${
           i === index
-            ? "bg-blue-600"
-            : "bg-gray-300 dark:bg-gray-600 hover:bg-blue-400"
+            ? "bg-emerald-600 dark:bg-red-600 hover:bg-white-400"
+            : "bg-gray-300 dark:bg-white-600 hover:bg-white-400"
         }`}
           />
         ))}

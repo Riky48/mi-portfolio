@@ -2,21 +2,22 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 px-6 bg-slate-50 dark:bg-slate-900 transition"
+      className="h-screen flex items-center px-6 bg-gradient-to-br from-green-900 via-black-800 to-slate-900
+    dark:from-dark-bg dark:via-black/5 dark:to-black"
     >
       <div className="max-w-3xl mx-auto text-center">
 
-        <h2 className="text-3xl font-bold mb-6 bg-slate-50 dark:bg-slate-900
-        text-slate-900 dark:text-slate-100">
+        <h2 className="text-3xl font-bold mb-6 
+        text-green-600 dark:text-red-600">
           Contacto
         </h2>
 
-        <p className="text-slate-600 dark:text-slate-300 mb-8">
+        <p className="text-white dark:text-white mb-8">
           Si querés contactarme por trabajo, proyectos o colaborar, escribime.
         </p>
 
         <div className="space-y-4">
-          <p className="text-lg text-slate-600 dark:text-slate-300">
+          <p className="text-lg text-green-600/70 dark:text-red-600/70 ">
             📧 riki.48@hotmail.com
           </p>
 
@@ -25,7 +26,7 @@ export default function Contact() {
               href="https://github.com/Riky48"
               target="_blank"
               rel="noreferrer"
-              className="text-blue-600 hover:underline"
+              className="text-green-600 hover:underline dark:text-red-600"
             >
               GitHub
             </a>
@@ -34,7 +35,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/ricardokrotterd/"
               target="_blank"
               rel="noreferrer"
-              className="text-blue-600 hover:underline"
+              className="text-green-600 hover:underline dark:text-red-600"
             >
               LinkedIn
             </a>
@@ -42,6 +43,9 @@ export default function Contact() {
         </div>
 
       </div>
+      
+  
+
     </section>
   );
 }

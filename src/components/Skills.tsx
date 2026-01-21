@@ -1,57 +1,87 @@
+import binaryBg from "../assets/binary-bg.png";
+
 export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-24 px-6 bg-slate-50 dark:bg-slate-900 transition-colors"
+      className="
+        relative min-h-screen
+        flex items-center
+        px-6 py-24
+        bg-black
+      "
+      style={{
+        backgroundImage: `url(${binaryBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12 text-center">
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-black/80 dark:bg-black/90" />
+
+      {/* CONTENIDO */}
+      <div className="relative z-10 w-full">
+        <h2
+          className="
+            text-3xl font-bold text-center mb-16
+            text-emerald-400 dark:text-red-500
+          "
+        >
           Habilidades Técnicas
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Frontend */}
-          <div
-            className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm 
-            transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-          >
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          {/* FRONTEND */}
+          <div className="bg-black/60 backdrop-blur p-6 rounded-xl
+            border border-emerald-500/30 dark:border-red-500/30
+            hover:border-emerald-400 dark:hover:border-red-400
+            hover:shadow-[0_0_25px_rgba(16,185,129,0.45)]
+            dark:hover:shadow-[0_0_25px_rgba(239,68,68,0.45)]
+            transition-all duration-300">
+            <h3 className="text-xl font-semibold mb-4 text-white">
               Frontend
             </h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="space-y-2 text-gray-300">
               <li>HTML5</li>
               <li>CSS3</li>
-              <li>JavaScript (ES6+)</li>
+              <li>JavaScript</li>
               <li>TypeScript</li>
               <li>React</li>
               <li>Tailwind CSS</li>
             </ul>
           </div>
 
-          {/* Backend */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm 
-            transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+          {/* BACKEND */}
+          <div className="bg-black/60 backdrop-blur p-6 rounded-xl
+            border border-emerald-500/30 dark:border-red-500/30
+            hover:border-emerald-400 dark:hover:border-red-400
+            hover:shadow-[0_0_25px_rgba(16,185,129,0.45)]
+            dark:hover:shadow-[0_0_25px_rgba(239,68,68,0.45)]
+            transition-all duration-300">
+            <h3 className="text-xl font-semibold mb-4 text-white">
               Backend
             </h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="space-y-2 text-gray-300">
               <li>Node.js</li>
               <li>NestJS</li>
               <li>APIs REST</li>
-              <li>Autenticación</li>
-              <li>Manejo de asincronía</li>
+              <li>Auth</li>
             </ul>
           </div>
 
-          {/* Tools */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm 
-            transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+          {/* TOOLS */}
+          <div className="bg-black/60 backdrop-blur p-6 rounded-xl
+            border border-emerald-500/30 dark:border-red-500/30
+            hover:border-emerald-400 dark:hover:border-red-400
+            hover:shadow-[0_0_25px_rgba(16,185,129,0.45)]
+            dark:hover:shadow-[0_0_25px_rgba(239,68,68,0.45)]
+            transition-all duration-300">
+            <h3 className="text-xl font-semibold mb-4 text-white">
               Herramientas
             </h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-              <li>MySQL</li>
+            <ul className="space-y-2 text-gray-300">
               <li>Git & GitHub</li>
+              <li>MySQL</li>
               <li>Vite</li>
               <li>Postman</li>
               <li>VS Code</li>

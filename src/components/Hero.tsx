@@ -4,21 +4,22 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative <-0 min-h-screen pt-24 
-                flex items-center justify-center
-                 bg-slate-100 dark:bg-gray-950
-                 text-gray-900 dark:text-gray-100 overflow-hidden"
+      className="
+  min-h-screen flex items-center justify-center
+  bg-green/50 dark:bg-dark-bg
+"
+
     >
       {/* Fondo */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center bg-green"
         style={{
           backgroundImage: "url('/hero-drums.jpg')",
         }}
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/80 dark:bg-black/70" />
+      <div className="absolute inset-0 bg-black/70 dark:bg-black/70" />
 
       {/* Contenido */}
       <motion.div
@@ -32,10 +33,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold mb-4"
+          className="text-4xl md:text-5xl font-bold mb-4 text-white dark:text-white"
         >
           Hola, soy{" "}
-          <span className="text-blue-600 dark:text-blue-400">
+          <span className="text-green-600 border--b border-black dark:text-dark-accent">
             Ricardo Krotter
           </span>
         </motion.h1>
@@ -46,7 +47,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
           className="text-2xl md:text-3xl font-semibold
-                     text-slate-600 dark:text-slate-300 mb-6"
+                     text-white dark:text-dark-muted mb-6"
         >
           Desarrollador Web Full Stack & Músico
         </motion.h2>
@@ -56,7 +57,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="text-lg text-slate-500 dark:text-slate-400 mb-10"
+          className="text-lg text-white dark:text-dark-muted mb-10"
         >
           Creo aplicaciones web funcionales, claras y con identidad.
         </motion.p>
@@ -71,8 +72,8 @@ export default function Hero() {
           <a
             href="#projects"
             className="px-6 py-3 rounded-md
-                       bg-blue-600 text-white font-semibold
-                       hover:bg-blue-700 hover:-translate-y-0.5
+                       bg-green-600 text-black font-semibold dark:bg-dark-accent dark:text-black
+                       hover:bg-green-500 hover:-translate-y-0.5 dark:hover:bg-dark-accent/50
                        transition-all"
           >
             Ver proyectos
@@ -81,9 +82,9 @@ export default function Hero() {
           <a
             href="#contact"
             className="px-6 py-3 rounded-md
-                       border border-blue-600
-                       text-blue-600 dark:text-blue-400
-                       hover:bg-blue-50 dark:hover:bg-gray-700
+                       border border-green-600 dark:border-dark-accent
+                       text-green-600 dark:text-red-400
+                       hover:bg-gray-800 dark:hover:bg-gray-800
                        hover:-translate-y-0.5
                        transition-all"
           >

@@ -8,27 +8,27 @@ type NavbarProps = {
 export default function Navbar({ dark, toggleDark }: NavbarProps) {
   const [open, setOpen] = useState(false);
 
-  const linkClass = `
-  px-3 py-2 rounded-md
-  text-slate-700 dark:text-gray-300
-  hover:text-blue-600 dark:hover:text-blue-400
-  hover:bg-blue-500/10 dark:hover:bg-blue-400/10
-  transition-all
-`;
+  const linkClass = "px-3 py-2 rounded-md text-dark-text dark:text-dark-text hover:text-light-green dark:hover:text-dark-accent hover:bg-gray-600/70 dark:hover:bg-dark-accent/20 transition-all";
 
 
   return (
-    <nav className="fixed top-0 w-full z-[9999] bg-slate-100/90 dark:bg-gray-950/90 backdrop-blur border-b border-slate-200 dark:border-gray-800">
+    <nav
+  className="
+    fixed top-0 w-full z-50
+    bg-gradient-to-br from-emerald-900 via-emerald/5 to-black-900
+    dark:from-dark-bg dark:via-black/5 dark:to-black
+    transition-colors
+  "
+>
+
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <span className="text-xl font-bold text-slate-900 dark:text-white">
-          Riky<span className="text-blue-600 dark:text-blue-400">.dev</span>
+          Riky<span className="text-white dark:text-red-700">.dev</span>
         </span>
 
         {/* Links Desktop */}
-        <div className="hidden md:flex items-center gap-6 
-        text-gray-700 dark:text-gray-300 hover:text-blue-600
-        dark:hover:text-blue-400 transition-colors">
+        <div >
           <a href="#hero" className={linkClass}>
             Inicio
           </a>
@@ -106,7 +106,13 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
             Contacto
           </a>
 
-          <button onClick={toggleDark} className="block text-lg">
+          <button onClick={toggleDark} className="
+  ml-4 text-xl
+  text-light-green dark:text-dark-accent
+  hover:scale-110
+  transition
+"
+>
             {dark ? "☀️ Modo claro" : "🌙 Modo oscuro"}
           </button>
         </div>
