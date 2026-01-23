@@ -55,6 +55,7 @@ export default function AboutProjects() {
         px-6 pb-20
         md:pb-24
         bg-gradient-to-br from-emerald-900 via-black to-black
+        dark:from-black dark:via-black/70 dark:to-black
       "
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center w-full">
