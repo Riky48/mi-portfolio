@@ -52,23 +52,24 @@ export default function AboutProjects() {
   return (
     <section
       className="
-        min-h-screen flex items-center
-        px-6 py-24
+        min-h-[100svh] md:min-h-screen
+        flex items-center
+        px-6 pt-28 pb-20
+        md:pt-24 md:pb-24
         bg-gradient-to-br from-emerald-900 via-black to-black
-        dark:from-black dark:to-black
       "
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center w-full">
 
         {/* ================= ABOUT ================= */}
-        <section id="about">
+        <div id="about">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center md:justify-start mb-8">
               <div
                 className="
                   w-64 h-80 overflow-hidden rounded-2xl
@@ -104,31 +105,30 @@ export default function AboutProjects() {
                 disciplina, creatividad y trabajo en equipo.
               </p>
             </div>
-          </motion.div>
-          <div className="mt-8 flex justify-center md:justify-start">
-  <a
-    href="/Ricardo_Krotter_CV.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
-      px-6 py-3 rounded-md
-      border border-emerald-500
-      text-emerald-400 font-semibold
-      hover:bg-emerald-500 hover:text-black
-      dark:border-red-500 dark:text-red-400
-      dark:hover:bg-red-500 dark:hover:text-black
-      transition-all
-      flex items-center gap-2
-    "
-  >
-    📄 Ver CV (PDF)
-  </a>
-</div>
 
-        </section>
+            <div className="mt-8">
+              <a
+                href="/Ricardo_Krotter_CV.pdf"
+                target="_blank"
+                className="
+                  inline-flex items-center gap-2
+                  px-6 py-3 rounded-md
+                  border border-emerald-500
+                  text-emerald-400 font-semibold
+                  hover:bg-emerald-500 hover:text-black
+                  dark:border-red-500 dark:text-red-400
+                  dark:hover:bg-red-500 dark:hover:text-black
+                  transition-all
+                "
+              >
+                📄 Ver CV (PDF)
+              </a>
+            </div>
+          </motion.div>
+        </div>
 
         {/* ================= PROJECTS ================= */}
-        <section id="projects" className="text-center scroll-mt-24">
+        <div id="projects" className="text-center scroll-mt-24">
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -204,7 +204,7 @@ export default function AboutProjects() {
               <button onClick={next} className="text-emerald-400 dark:text-red-400">→</button>
             </div>
           </motion.div>
-        </section>
+        </div>
 
       </div>
     </section>

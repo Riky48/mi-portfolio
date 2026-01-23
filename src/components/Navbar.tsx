@@ -58,7 +58,7 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
         {/* Botón Hamburguesa (Mobile) */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl text-black-900 dark:text-white"
+          className="md:hidden text-2xl text-white dark:text-white"
         >
           ☰
         </button>

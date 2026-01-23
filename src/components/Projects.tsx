@@ -79,7 +79,7 @@ export default function Projects() {
   transition-all
 "
             > 
-            <img 
+            <img loading="lazy"
         src={project.image}
         alt={project.title}
         className="w-full h-56 object-cover object-top rounded-lg mb-6 shadow-md
