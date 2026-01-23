@@ -5,7 +5,10 @@ export default function Hero() {
     <section
       id="hero"
       className="
-  h-screen-[100svh] flex items-center justify-center
+      relative
+  min-h-[100svh] pt-24 
+  flex items-center justify-center
+  overflow-hidden
   bg-green/50 dark:bg-dark-bg
 "
 

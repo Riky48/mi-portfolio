@@ -52,10 +52,8 @@ export default function AboutProjects() {
   return (
     <section
       className="
-        
-        flex items-center
-        px-6 pt-28 pb-20
-        md:pt-24 md:pb-24
+        px-6 pb-20
+        md:pb-24
         bg-gradient-to-br from-emerald-900 via-black to-black
       "
     >
@@ -72,6 +70,7 @@ export default function AboutProjects() {
             <div className="flex justify-center md:justify-start mb-8">
               <div
                 className="
+                mt-8
                   w-64 h-80 overflow-hidden rounded-2xl
                   border-4 border-emerald-500 dark:border-red-500
                   hover:shadow-[0_0_35px_rgba(16,185,129,0.5)]
@@ -82,7 +81,7 @@ export default function AboutProjects() {
                 <img
                   src={profileImg}
                   alt="Ricardo Krotter"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover "
                 />
               </div>
             </div>
@@ -128,7 +127,7 @@ export default function AboutProjects() {
         </div>
 
         {/* ================= PROJECTS ================= */}
-        <div id="projects" className="text-center scroll-mt-24">
+        <section id="projects" className="text-center scroll-mt-24">
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -204,7 +203,7 @@ export default function AboutProjects() {
               <button onClick={next} className="text-emerald-400 dark:text-red-400">→</button>
             </div>
           </motion.div>
-        </div>
+        </section>
 
       </div>
     </section>
