@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       id="hero"
       className="
-  min-h-screen flex items-center justify-center
+  h-screen-[100svh] flex items-center justify-center
   bg-green/50 dark:bg-dark-bg
 "
 

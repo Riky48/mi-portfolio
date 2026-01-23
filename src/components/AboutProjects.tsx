@@ -52,7 +52,7 @@ export default function AboutProjects() {
   return (
     <section
       className="
-        min-h-[100svh] md:min-h-screen
+        
         flex items-center
         px-6 pt-28 pb-20
         md:pt-24 md:pb-24
