@@ -70,7 +70,7 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
           <a
             href="#hero"
             onClick={() => setOpen(false)}
-            className="block mt-4 text-gray-800 dark:text-gray-200"
+            className="block mt-4 text-white dark:text-gray-200"
           >
             Inicio
           </a>
@@ -78,7 +78,7 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
           <a
             href="#about"
             onClick={() => setOpen(false)}
-            className="block text-gray-800 dark:text-gray-200"
+            className="block text-white dark:text-gray-200"
           >
             Sobre mí
           </a>
@@ -86,7 +86,7 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
           <a
             href="#projects"
             onClick={() => setOpen(false)}
-            className="block text-gray-800 dark:text-gray-200"
+            className="block text-white dark:text-gray-200"
           >
             Proyectos
           </a>
@@ -94,7 +94,7 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
           <a
             href="#skills"
             onClick={() => setOpen(false)}
-            className="block text-gray-800 dark:text-gray-200"
+            className="block text-white dark:text-gray-200"
           >
             Skills
           </a>
@@ -102,7 +102,7 @@ export default function Navbar({ dark, toggleDark }: NavbarProps) {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="block text-gray-800 dark:text-gray-200"
+            className="block text-white dark:text-gray-200"
           >
             Contacto
           </a>

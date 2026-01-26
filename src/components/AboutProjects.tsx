@@ -87,23 +87,44 @@ export default function AboutProjects() {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold mb-6 text-emerald-400 dark:text-red-500">
+            <h2 className="text-3xl text-decoration: underline font-bold mb-6 text-emerald-400 dark:text-red-500">
               Sobre mí
+              
             </h2>
+            <h3 className="text-2xl font-bold mb-6 text-emerald-400 dark:text-red-500"> 
+              Desarrollador Full Stack | Resolución de Problemas y Disciplina Técnica
+            </h3>
 
             <div className="space-y-5 text-gray-300 leading-relaxed">
               <p>
-                Vengo de un entorno laboral exigente, donde desarrollé
-                responsabilidad, constancia y capacidad de trabajo bajo presión.
+                Soy un apasionado por la tecnología con una trayectoria
+                 poco convencional que me ha brindado una perspectiva única
+                  en el desarrollo de software. 
+                  Con 10 años de experiencia en la Fuerza Policial 
+                  (actualmente en la Oficina de Judiciales), he desarrollado una
+                   capacidad excepcional para trabajar bajo presión, gestionar procesos críticos
+                    y mantener un rigor técnico inquebrantable
               </p>
               <p>
-                Reorienté mi carrera hacia el desarrollo web, creando
-                aplicaciones claras, funcionales y bien estructuradas.
+                Mi transición al mundo IT no fue casualidad, sino el resultado de
+                 años de estudio constante, completando formaciones intensivas en 2023 y 2025.
+                  Hoy domino el stack moderno (Next.js, TypeScript, Tailwind CSS, Node.js)
+                   para crear soluciones eficientes y escalables..
               </p>
               <p>
-                Soy músico y profesor de batería, experiencia que fortaleció mi
-                disciplina, creatividad y trabajo en equipo.
+                Además de la programación, soy baterista sesionista hace 18 años.
+                 La música me enseñó que la excelencia se logra con práctica diaria y que,
+                  al igual que en el código, la coordinación y el ritmo son esenciales para que un sistema funcione perfecto..
               </p>
+              <p>
+                ¿Qué aporto a un equipo?
+              <ul className="list-disc ml-4">
+                <li>Resiliencia y compromiso: No me rindo ante un bug ni ante un desafío complejo..</li>
+                <li>Atención al detalle: Mi experiencia en judiciales me entrenó para no pasar por alto ni una coma.</li>
+                <li>Aprendizaje continuo: Estoy en constante formación (actualmente enfocándome en mi profesionalización académica).</li>
+              </ul>
+              </p>
+              <p className="text-lm font-bold mb-6 text-emerald-400 dark:text-red-500">-Busco mi primera oportunidad en el sector IT para aplicar mi capacidad analítica y seguir creciendo en proyectos desafiantes.- </p>
             </div>
 
             <div className="mt-8">
