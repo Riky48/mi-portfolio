@@ -39,7 +39,7 @@ export default function Hero() {
           className="text-4xl md:text-5xl font-bold mb-4 text-white dark:text-white drop-shadow-lg"
         >
           Hola, soy{" "}
-          <span className="text-green-600 border--b border-black dark:text-dark-accent">
+          <span className="text-emerald-400 border--b border-black dark:text-dark-accent">
             Ricardo Krotter
           </span>
         </motion.h1>
