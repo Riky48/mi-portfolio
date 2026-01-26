@@ -46,7 +46,7 @@ export default function ContactFooter() {
         >
           <p className="text-lg text-white">
             📧 <span className="text-emerald-400 dark:text-red-400">
-              riki.48@gotmail.com
+              krotter.dev@gmail.com
             </span>
           </p>
 
