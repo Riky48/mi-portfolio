@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react"; // instale lucide react para usar los iconos
+import { Github, Linkedin, Mail, } from "lucide-react"; // instale lucide react para usar los iconos
 
 export default function ContactFooter() {
   return (
@@ -29,7 +29,7 @@ export default function ContactFooter() {
             ¿Tenés un proyecto en <span className="text-emerald-400 dark:text-red-500">mente?</span>
           </h2>
           <p className="max-w-xl mx-auto text-gray-400 text-lg">
-            Estoy buscando mi primera oportunidad en IT. Si buscás a alguien con **disciplina, resiliencia y compromiso técnico**, ¡hablemos!
+            Estoy buscando mi primera oportunidad en IT. Si buscás a alguien con <strong className="text-white font-bold">disciplina, resiliencia y compromiso técnico</strong>, ¡hablemos!
           </p>
         </motion.div>
 
@@ -53,8 +53,8 @@ export default function ContactFooter() {
             "
           >
             <Mail className="w-6 h-6" />
-            Enviar Mensaje
-            <ExternalLink className="w-4 h-4 opacity-50 group-hover:translate-x-1 transition-transform" />
+            Enviar Email
+            
           </a>
         </motion.div>
 

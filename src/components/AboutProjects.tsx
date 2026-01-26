@@ -87,7 +87,7 @@ export default function AboutProjects() {
 
             <div className="space-y-6 text-gray-200 leading-relaxed text-lg">
               <p>
-                Vengo de un entorno de <strong className="text-white font-bold">alta exigencia laboral</strong>. Durante mas de<strong className="text-white font-bold">10 años</strong> desarrollé la capacidad de gestionar <strong className="text-white font-bold">procesos criticos</strong> bajo presión con absoluta precisión.
+                Vengo de un entorno de <strong className="text-white font-bold">alta exigencia laboral</strong>. Durante mas de <strong className="text-white font-bold">10 años</strong> desarrollé la capacidad de gestionar <strong className="text-white font-bold">procesos criticos</strong> bajo presión con absoluta precisión.
               </p>
               <p>
                 En paralelo, realicé mi transición al mundo IT mediante formación intensiva (<strong className="text-white font-bold">(2023-2025)</strong>). Hoy domino un stack moderno enfocado en crear <strong className="text-white font-bold">soluciones escalables</strong>.
@@ -97,12 +97,14 @@ export default function AboutProjects() {
               </p>
 
               <div className="bg-emerald-500/10 dark:bg-red-500/10 p-5 rounded-xl border-l-4 border-emerald-500 dark:border-red-500">
-                <h3 className="font-bold mb-2 text-white italic">¿Qué aporto a un equipo?</h3>
-                <ul className="grid grid-cols-1 gap-2 text-sm">
-                  <li>✅ <strong className="text-white font-bold">Resiliencia:</strong> Resolutivo ante bugs y desafíos complejos.</li>
-                  <li>✅ <strong className="text-white font-bold">Atencion al detalle:</strong> Rigor técnico heredado de mi experiencia legal.</li>
-                  <li>✅ <strong className="text-white font-bold">Aprendizaje continuo</strong> En formación profesional constante (IFTS 29).</li>
-                </ul>
+                <h3 className="font-bold mb-2 text-white italic">¿Por qué mi perfil es distinto?</h3>
+                <p className="space-y-6 text-gray-200 leading-relaxed text-lg">
+                  
+                   Vengo de un entorno donde el error no es una opción.
+                    En el Poder Judicial aprendí que la precisión y la metodología lo son todo.
+                     Como músico, sé lo que es la disciplina diaria para que algo suene bien.
+                      Esa misma rigurosidad es la que aplico a mi código: limpio, escalable y entregado a tiempo
+                </p>
               </div>
             </div>
 

@@ -25,7 +25,7 @@ export default function Skills() {
           Habilidades Técnicas
         </h2>
         <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
-          Especializado en el ecosistema de JavaScript, con enfoque en arquitecturas escalables y tipado fuerte.
+          Desarrollo con JavaScript buscando siempre la estructura y la seguridad que da el tipado fuerte. Me gusta el código que es fácil de leer y de mantener.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -52,11 +52,11 @@ export default function Skills() {
               </li>
               <li className="flex flex-col">
                 <span className="text-white font-semibold">Tailwind CSS</span>
-                <span className="text-sm text-gray-400">Diseño responsivo y estilizado moderno (Mobile First).</span>
+                <span className="text-sm text-gray-400">Estilos rápidos y eficientes priorizando la experiencia en dispositivos móviles.</span>
               </li>
               <li className="flex flex-col">
                 <span className="text-white font-semibold">JavaScript (ES6+)</span>
-                <span className="text-sm text-gray-400">Lógica compleja y manipulación eficiente del DOM.</span>
+                <span className="text-sm text-gray-400">Dominio de las bases del lenguaje para manipular datos y estados con fluidez.</span>
               </li>
             </ul>
           </div>
@@ -79,15 +79,15 @@ export default function Skills() {
             <ul className="space-y-4">
               <li className="flex flex-col">
                 <span className="text-white font-semibold">NestJS & Node.js</span>
-                <span className="text-sm text-gray-400">Arquitecturas modulares y APIs REST robustas.</span>
+                <span className="text-sm text-gray-400">Construcción de servidores organizados y escalables bajo el patrón de módulos.</span>
               </li>
               <li className="flex flex-col">
                 <span className="text-white font-semibold">MySQL</span>
-                <span className="text-sm text-gray-400">Modelado de bases de datos relacionales y consultas.</span>
+                <span className="text-sm text-gray-400">Diseño de bases de datos relacionales y optimización de consultas.</span>
               </li>
               <li className="flex flex-col">
                 <span className="text-white font-semibold">Auth (JWT / OAuth)</span>
-                <span className="text-sm text-gray-400">Implementación de sistemas de seguridad y sesiones.</span>
+                <span className="text-sm text-gray-400">Gestión segura de usuarios y protección de rutas en el servidor.</span>
               </li>
             </ul>
           </div>
@@ -110,15 +110,15 @@ export default function Skills() {
             <ul className="space-y-4">
               <li className="flex flex-col">
                 <span className="text-white font-semibold">Git & GitHub</span>
-                <span className="text-sm text-gray-400">Control de versiones y trabajo colaborativo.</span>
+                <span className="text-sm text-gray-400">Gestión de código y colaboración en equipo siguiendo flujos de trabajo claros.</span>
               </li>
               <li className="flex flex-col">
                 <span className="text-white font-semibold">Postman & Vite</span>
-                <span className="text-sm text-gray-400">Pruebas de APIs y entornos de desarrollo rápidos.</span>
+                <span className="text-sm text-gray-400">Testeo de endpoints y configuración de entornos de desarrollo ágiles.</span>
               </li>
               <li className="flex flex-col">
-                <span className="text-white font-semibold">Gestión Crítica</span>
-                <span className="text-sm text-gray-400">Resolución de problemas bajo presión y disciplina.</span>
+                <span className="text-white font-semibold">Disciplina & Resolución</span>
+                <span className="text-sm text-gray-400">Capacidad de mantener el foco en entornos de presión, heredada de mi trayectoria profesional.</span>
               </li>
             </ul>
           </div>
