@@ -22,7 +22,7 @@ export default function Hero() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70 dark:bg-black/70" />
+      <div className="absolute inset-0 bg-black/85 dark:bg-black/85" /> {/* modificado para mejorar el contraste */}
 
       {/* Contenido */}
       <motion.div
@@ -36,7 +36,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-4xl md:text-5xl font-bold mb-4 text-white dark:text-white"
+          className="text-4xl md:text-5xl font-bold mb-4 text-white dark:text-white drop-shadow-lg"
         >
           Hola, soy{" "}
           <span className="text-green-600 border--b border-black dark:text-dark-accent">
