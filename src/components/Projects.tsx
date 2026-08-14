@@ -2,11 +2,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import riffandrateImg from "../assets/riffandrate.png";
 import portfolioImg from "../assets/portfolio.png";
+import exterminioImg from "../assets/exterminio.png";
 
 type Project = {
   title: string;
+  category: string;
   description: string;
-  stack: string;
+  stack: string[];
   repo: string;
   demo: string;
   image: string;
@@ -14,19 +16,31 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Plataforma Web para Músicos",
+    title: "Riff & Rate",
+    category: "Plataforma Web para Músicos",
     description:
-      "Red social Full Stack para músicos con perfiles profesionales, feed social y marketplace de instrumentos.",
-    stack: "React · TypeScript · NestJS · MySQL",
+      "Aplicación web comunitaria que integra perfiles interactivos, catálogo de instrumentos y marketplace. Desarrollada con arquitectura modular, consumo de API REST y persistencia en base de datos relacional.",
+    stack: ["React", "TypeScript", "NestJS", "MySQL", "Tailwind CSS"],
     repo: "https://github.com/Riky48/TPFINALFIP-riff.and.rate",
     demo: "https://riffandrate.vercel.app",
     image: riffandrateImg,
   },
   {
-    title: "Portfolio Personal",
+    title: "Web Oficial - Exterminio",
+    category: "Landing Page Institucional",
     description:
-      "Portfolio profesional desarrollado con React, Vite y Tailwind CSS.",
-    stack: "React · Vite · Tailwind",
+      "Sitio oficial de alto impacto visual con enfoque mobile-first. Optimización de recursos multimedia para velocidad de carga, componentes interactivos y diseño adaptativo.",
+    stack: ["React", "Vite", "Tailwind CSS", "Responsive Web"],
+    repo: "https://github.com/Riky48/Exterminio.git",
+    demo: "https://exterminio.vercel.app",
+    image: exterminioImg,
+  },
+  {
+    title: "Portfolio Personal",
+    category: "Aplicación Web Interactiva",
+    description:
+      "Plataforma personal orientada a la presentación de proyectos. Incluye transiciones fluidas con Framer Motion, soporte para temas dinámicos y arquitectura de componentes reutilizables.",
+    stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     repo: "https://github.com/Riky48/mi-portfolio",
     demo: "https://ricardokrotter.vercel.app",
     image: portfolioImg,
@@ -52,57 +66,82 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen py-24 px-6  bg-gradient-to-br from-slate-900 via-black800 to-green-900
-    dark:from-dark-bg dark:via-black/5 dark:to-black
-    transition-colors"
+      className="
+        min-h-screen py-24 px-6
+        bg-gradient-to-br from-emerald-950/30 via-black to-black
+        dark:from-red-950/20 dark:via-black dark:to-black
+        transition-colors duration-300 flex items-center
+      "
     >
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-12 text-green-600 dark:text-red-600">
-          Proyectos
+      <div className="max-w-4xl mx-auto w-full text-center">
+        <p className="uppercase tracking-widest text-xs font-bold text-emerald-400 dark:text-red-400 mb-2 font-mono">
+          Trabajos recientes
+        </p>
+
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-white">
+          Proyectos Destacados
         </h2>
 
         <div className="relative overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
-              initial={{ x: direction > 0 ? 100 : -100, opacity: 0 }}
+              initial={{ x: direction > 0 ? 80 : -80, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: direction > 0 ? -100 : 100, opacity: 0 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
+              exit={{ x: direction > 0 ? -80 : 80, opacity: 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
               className="
-  bg-gradient-to-br from-emerald-900 via-green-900 to-dark dark:from-red-700 dark:via-red-900 dark:to-dark
-  border border-black border-5 dark:border-white dark:border-5
-  rounded-xl
-  shadow-sm
-  hover:-translate-y-1
-  hover:shadow-xl
-  transition-all
-"
-            > 
-            <img loading="lazy"
-        src={project.image}
-        alt={project.title}
-        className="w-full h-56 object-cover object-top rounded-lg mb-6 shadow-md
-        transition-transform duration-300 group-hover:scale-105"
-        />
-              <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
+                bg-white/5 border border-emerald-500/30 dark:border-red-500/30
+                rounded-2xl shadow-xl backdrop-blur-sm p-6 md:p-8
+                hover:border-emerald-500/60 dark:hover:border-red-500/60
+                transition-all duration-300
+              "
+            >
+              <div className="relative h-60 md:h-72 w-full overflow-hidden rounded-xl mb-6 bg-black/60">
+                <img
+                  loading="lazy"
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                />
+              </div>
 
-              <p className="text-white dark:text-white mb-4">
+              <span className="text-xs uppercase tracking-wider text-emerald-400 dark:text-red-400 font-mono font-semibold">
+                {project.category}
+              </span>
+
+              <h3 className="text-2xl md:text-3xl font-bold mt-1 mb-4 text-white">
+                {project.title}
+              </h3>
+
+              <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto mb-6 leading-relaxed">
                 {project.description}
               </p>
 
-              <p className="text-sm text-gray-500 mb-6">
-                <span className="font-semibold">Stack:</span> {project.stack}
-              </p>
+              {/* Stack Badges */}
+              <div className="flex flex-wrap justify-center gap-2 mb-8">
+                {project.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-white/10 text-white text-xs rounded-full border border-white/10 font-mono"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
 
-              <div className="flex justify-center gap-4">
+              {/* Action Buttons */}
+              <div className="flex justify-center gap-4 max-w-md mx-auto">
                 <a
                   href={project.repo}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-4 py-2 bg-green-600 text-black font-semibold dark:bg-dark-accent dark:text-black
-                       hover:bg-green-500 hover:-translate-y-0.5 dark:hover:bg-dark-accent/50
-                       transition-all rounded "
+                  className="
+                    flex-1 py-3 px-4 rounded-lg font-semibold text-sm
+                    bg-emerald-500 text-black hover:bg-emerald-400
+                    dark:bg-red-600 dark:text-white dark:hover:bg-red-500
+                    transition-all duration-200 shadow-md
+                  "
                 >
                   Repositorio
                 </a>
@@ -111,50 +150,62 @@ export default function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-4 py-2 rounded-md
-                       border border-green-600 dark:border-dark-accent
-                       text-green-600 dark:text-red-400
-                       hover:bg-gray-800 dark:hover:bg-gray-800
-                       hover:-translate-y-0.5
-                       transition-all"
+                  className="
+                    flex-1 py-3 px-4 rounded-lg font-semibold text-sm
+                    border border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10
+                    dark:border-red-500/50 dark:text-red-400 dark:hover:bg-red-500/10
+                    transition-all duration-200
+                  "
                 >
-                  Demo
+                  Live Demo
                 </a>
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* Controles */}
-        <div className="flex justify-center gap-6 mt-8">
+        {/* Controles y Paginador */}
+        <div className="flex items-center justify-between max-w-xs mx-auto mt-8">
           <button
             onClick={prev}
-            className="px-4 py-2 border rounded hover:bg-green-500 dark:hover:bg-red-500"
+            className="
+              px-4 py-2 text-sm rounded-lg border border-white/10
+              text-gray-300 hover:text-white hover:bg-white/10
+              transition-all
+            "
           >
             ← Anterior
           </button>
 
+          <div className="flex gap-2">
+            {projects.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  setDirection(i > index ? 1 : -1);
+                  setIndex(i);
+                }}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  i === index
+                    ? "w-6 bg-emerald-400 dark:bg-red-500"
+                    : "bg-gray-600 hover:bg-gray-400"
+                }`}
+                aria-label={`Ir al proyecto ${i + 1}`}
+              />
+            ))}
+          </div>
+
           <button
             onClick={next}
-            className="px-4 py-2 border rounded hover:bg-green-500 dark:hover:bg-red-500"
+            className="
+              px-4 py-2 text-sm rounded-lg border border-white/10
+              text-gray-300 hover:text-white hover:bg-white/10
+              transition-all
+            "
           >
             Siguiente →
           </button>
         </div>
-      </div>
-      <div className="flex justify-center gap-2 mt-6">
-        {projects.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full transition
-        ${
-          i === index
-            ? "bg-emerald-600 dark:bg-red-600 hover:bg-white-400"
-            : "bg-gray-300 dark:bg-white-600 hover:bg-white-400"
-        }`}
-          />
-        ))}
       </div>
     </section>
   );
