@@ -32,7 +32,7 @@ const projects: Project[] = [
       "Sitio oficial de alto impacto visual con enfoque mobile-first. Optimización de recursos multimedia para velocidad de carga, componentes interactivos y diseño adaptativo.",
     stack: ["React", "Vite", "Tailwind CSS", "Responsive Web"],
     repo: "https://github.com/Riky48/Exterminio.git",
-    demo: "https://exterminio.vercel.app",
+    demo: "https://www.exterminio.com.ar",
     image: exterminioImg,
   },
   {
