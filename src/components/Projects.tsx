@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import riffandrateImg from "../assets/riffandrate.png";
+import riffandrateImg from "../assets/hero_riff.jpg";
 import portfolioImg from "../assets/portfolio.png";
 import exterminioImg from "../assets/exterminio.png";
 
@@ -21,8 +21,8 @@ const projects: Project[] = [
     description:
       "Aplicación web comunitaria que integra perfiles interactivos, catálogo de instrumentos y marketplace. Desarrollada con arquitectura modular, consumo de API REST y persistencia en base de datos relacional.",
     stack: ["React", "TypeScript", "NestJS", "MySQL", "Tailwind CSS"],
-    repo: "https://github.com/Riky48/TPFINALFIP-riff.and.rate",
-    demo: "https://riffandrate.vercel.app",
+    repo: "https://github.com/Riky48/riff-and-rate-new",
+    demo: "https://riff-and-rate-new.vercel.app/",
     image: riffandrateImg,
   },
   {
