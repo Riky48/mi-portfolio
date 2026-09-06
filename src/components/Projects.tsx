@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import riffandrateImg from "../assets/riffandrate.png";
 import portfolioImg from "../assets/portfolio.png";
 import exterminioImg from "../assets/exterminio.png";
+import finanzasImg from "../assets/finanzas.png";
 
 type Project = {
   title: string;
@@ -15,6 +16,16 @@ type Project = {
 };
 
 const projects: Project[] = [
+  {
+  title: "Control de Finanzas",
+  category: "PWA & Gestión Financiera",
+  description:
+    "Aplicación web móvil e instalable (PWA) para la gestión e historial de ingresos, gastos y presupuestos en tiempo real. Construida con autenticación de usuarios y persistencia relacional en PostgreSQL a través de Supabase.",
+  stack: ["React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
+  repo: "https://github.com/Riky48/FinanceControl",
+  demo: "https://finance-control-lake.vercel.app",
+  image: finanzasImg,
+},
   {
     title: "Riff & Rate",
     category: "Plataforma Web para Músicos",
